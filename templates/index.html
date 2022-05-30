@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Steganography</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="header">
+        Created by Bangkit Team
+      </h1>
+      <br>
+      <h1 class="title">
+        Try Detect Coffee disease!
+      </h1>
+      
+      <p class="subtitle">
+        Take on high quality picture for best prediction
+      </p>
+
+      <div id="file-js-example2" class="file is-primary has-name">
+        <form action="/" method="post" enctype="multipart/form-data">
+        <label class="file-label">
+          <input class="file-input" type="file" name="imagefile">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fas fa-upload"></i>
+            </span>
+            <span class="file-label">
+              Choose a file…
+            </span>
+          </span>
+          <span class="file-name">
+            No file uploaded
+          </span>
+        </label>
+        <br>
+        <button class="button is-primary mb-3" type="submit" value="Predict Image">Predict</button>
+    
+        <p class="subtitle">
+          Kondisi kopi : {{value}}
+        </p>
+        </form>
+      </div>
+    
+      
+      <script>
+        const fileInp = document.querySelector('#file-js-example2 input[type=file]');
+        fileInp.onchange = () => {
+          if (fileInp.files.length > 0) {
+            const fileName = document.querySelector('#file-js-example2 .file-name');
+            fileName.textContent = fileInp.files[0].name;
+          }
+        }
+      </script>
+    </div>
+
+  </section>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </body>
+</html>
